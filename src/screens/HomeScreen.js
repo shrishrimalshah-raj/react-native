@@ -22,6 +22,13 @@ const HomeScreen = (props) => {
       <Button title="Go to square reducer screen" onPress={() => navigate('SquareReducer')} />
       <Button title="Go to count reducer screen" onPress={() => navigate('CountReducer')} />
       <Button title="Go to text screen" onPress={() => navigate('Text')} />
+      <Button title="Go to box model screen" onPress={() => navigate('BoxModel')} />
+      <Button title="Go to flexbox model screen" onPress={() => navigate('FlexboxModel')} />
+      <Button title="Go to position model screen" onPress={() => navigate('PositionModel')} />
+      <Button
+        title="Go to screen model exercise screen"
+        onPress={() => navigate('ScreenModelExercise')}
+      />
     </View>
   );
 };

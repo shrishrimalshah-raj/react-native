@@ -1,15 +1,22 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
+// PrimitiveComponent
 import HomeScreen from './src/screens/HomeScreen';
-import ComponentsScreen from './src/screens/ComponentsScreen';
-import ListScreen from './src/screens/ListScreen';
-import ImageScreen from './src/screens/ImageScreen';
-import CounterScreen from './src/screens/CounterScreen';
-import ColorScreen from './src/screens/ColorScreen';
-import SquareScreen from './src/screens/SquareScreen';
-import SquareScreenReducer from './src/screens/SquareScreenReducer';
-import CounterScreenReducer from './src/screens/CounterScreenReducer';
-import TextScreen from './src/screens/TextScreen';
+import ComponentsScreen from './src/screens/PrimitiveComponent/ComponentsScreen';
+import ListScreen from './src/screens/PrimitiveComponent/ListScreen';
+import ImageScreen from './src/screens/PrimitiveComponent/ImageScreen';
+// StateManagement
+import CounterScreen from './src/screens/StateManagement/CounterScreen';
+import ColorScreen from './src/screens/StateManagement/ColorScreen';
+import SquareScreen from './src/screens/StateManagement/SquareScreen';
+import SquareScreenReducer from './src/screens/StateManagement/SquareScreenReducer';
+import CounterScreenReducer from './src/screens/StateManagement/CounterScreenReducer';
+import TextScreen from './src/screens/StateManagement/TextScreen';
+// ScreenLayout
+import BoxModelScreen from './src/screens/ScreenLayout/BoxModelScreen';
+import FlexboxModelScreen from './src/screens/ScreenLayout/FlexboxModelScreen';
+import PositionModelScreen from './src/screens/ScreenLayout/PositionModelScreen';
+import ScreenLayoutExercise from './src/screens/ScreenLayout/ScreenLayoutExercise';
 
 const navigator = createStackNavigator(
   {
@@ -22,7 +29,11 @@ const navigator = createStackNavigator(
     Square: SquareScreen,
     SquareReducer: SquareScreenReducer,
     CountReducer: CounterScreenReducer,
-    Text: TextScreen
+    Text: TextScreen,
+    BoxModel: BoxModelScreen,
+    FlexboxModel: FlexboxModelScreen,
+    PositionModel: PositionModelScreen,
+    ScreenModelExercise: ScreenLayoutExercise
   },
   {
     initialRouteName: 'Home',

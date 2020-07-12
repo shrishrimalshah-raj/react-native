@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Text, StyleSheet, View, Button, FlatList } from 'react-native';
 import PropTypes from 'prop-types';
-import ColorCounter from '../components/ColorCounter';
+import ColorCounter from '../../components/ColorCounter';
 
 const COLOR_INCRENEMT = 15;
 

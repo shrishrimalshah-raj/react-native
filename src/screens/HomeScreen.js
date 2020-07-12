@@ -1,8 +1,29 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
+import PropTypes from 'prop-types';
 
-const HomeScreen = () => {
-  return <Text style={styles.text}>My name is Raj!</Text>;
+const HomeScreen = (props) => {
+  const {
+    navigation: { navigate }
+  } = props;
+
+  // TouchableOpacity Component Example
+  // <TouchableOpacity onPress={() => navigate('List')}>
+  //   <Text> GO TO LIST DEMO </Text>
+  // </TouchableOpacity>;
+  return (
+    <View>
+      <Button title="Go to components screen" onPress={() => navigate('Components')} />
+      <Button title="Go to list screen" onPress={() => navigate('List')} />
+      <Button title="Go to image screen" onPress={() => navigate('Image')} />
+      <Button title="Go to counter screen" onPress={() => navigate('Counter')} />
+      <Button title="Go to color screen" onPress={() => navigate('Color')} />
+      <Button title="Go to square screen" onPress={() => navigate('Square')} />
+      <Button title="Go to square reducer screen" onPress={() => navigate('SquareReducer')} />
+      <Button title="Go to count reducer screen" onPress={() => navigate('CountReducer')} />
+      <Button title="Go to text screen" onPress={() => navigate('Text')} />
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
@@ -12,3 +33,12 @@ const styles = StyleSheet.create({
 });
 
 export default HomeScreen;
+
+HomeScreen.propTypes = {
+  navigate: PropTypes.func,
+  navigation: PropTypes.objectOf(PropTypes.any).isRequired
+};
+
+HomeScreen.defaultProps = {
+  navigate: () => {}
+};
